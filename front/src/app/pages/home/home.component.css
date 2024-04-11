@@ -1,0 +1,29 @@
+.home-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background:url("../../../assets/images/echec.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home-img{
+    height: 60px;
+    aspect-ratio: 1;
+    background:url("../../../assets/images/logocard.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home-h1{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}

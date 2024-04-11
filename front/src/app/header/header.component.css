@@ -1,0 +1,85 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 50px;
+    justify-content: space-between;
+    position:absolute;
+    z-index: 99;
+}
+
+img{
+    height: 60px;
+    aspect-ratio: 1;
+    background:url("./../../assets/images/logocard.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home-h1{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.home-nav{
+    width: 300px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.home-nav {
+    width: 600px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.home-nav button{
+    height: 30px;
+    width: 90px;
+    border: none;
+    border-radius: 15px;
+    background-color: #80808070;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.home-nav a{
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: "EB Garamond", serif;
+}
+
+app-signin,
+app-signup{
+    display: none;
+    position:absolute;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 250px;
+    background-color: #646464;
+    z-index: 99;
+    border-radius: 40px;
+}

@@ -1,0 +1,50 @@
+.d-body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.d-card{
+    height: 400px;
+    width: 230px;
+    border: 2px solid #ffebcd;
+    border-radius: 10px;
+}
+
+.d-card:nth-child(1) {
+    background: url('./../../../assets/images/fou.svg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .d-card:nth-child(2) {
+    background: url('./../../../assets/images/tour.svg');
+    background-size: cover;
+    background-position: center;
+
+  }
+  
+  .d-card:nth-child(3) {
+    background: url('./../../../assets/images/fou.svg');
+    background-size: cover;
+    background-position: center;
+  }
+
+.hover-text{
+    display: none;
+    align-items: center;
+    height: 10%;
+    justify-content: center;
+    background-color: #ffebcd;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.d-card:hover .hover-text{
+    display: flex;
+}

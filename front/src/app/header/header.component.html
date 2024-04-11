@@ -1,0 +1,20 @@
+<header class="header">
+    <img
+      src="assets/images/logocard.svg"
+      alt="Logo"
+    />
+    <nav class="home-nav" *ngIf="isLoggedIn" id="navlog">
+        <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboard</a>
+        <a routerLink="/rules" routerLinkActive="active" ariaCurrentWhenActive="page">Rules</a>
+        <a routerLink="/card" routerLinkActive="active" ariaCurrentWhenActive="page">Cards</a>
+        <button class="btn-logout" (click)="logout()">Log out</button>
+    </nav>
+    <nav class="home-nav" *ngIf="!isLoggedIn">
+        <a routerLink="/card" routerLinkActive="active" ariaCurrentWhenActive="page">Cards</a>
+        <a routerLink="/rules" routerLinkActive="active" ariaCurrentWhenActive="page">Rules</a>
+        <button (click)="changeDisplay('signin')">Sign In</button>
+        <button (click)="changeDisplay('signup')">Sign Up</button>
+    </nav>
+</header>
+<app-signin id="signin"></app-signin>
+<app-signup id="signup"></app-signup>
