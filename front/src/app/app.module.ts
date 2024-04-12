@@ -9,13 +9,15 @@ import { HeaderModule } from './header/header.module';
 import { RulesComponent } from './pages/rules/rules.component';
 import { AuthGuard } from './guards/link.guard';
 import { CardsComponent } from './pages/cards/cards.component';
+import { UserCardComponent } from './pages/user-card/user-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     RulesComponent,
-    CardsComponent
+    CardsComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,

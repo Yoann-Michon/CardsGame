@@ -13,7 +13,7 @@ export class CardsService extends AbstractService<CardModel> implements ICardSer
 
     async findAllBasic(): Promise<CardBasicModel[]> {
         return (await this.findAll()).map((item: CardModel) => ({
-            id: item.id, name: item.name
+            id: item.id, name: item.name, value:item.value
         }))
     }
 
