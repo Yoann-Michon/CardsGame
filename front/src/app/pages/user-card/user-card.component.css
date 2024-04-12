@@ -1,0 +1,113 @@
+.display-card {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+h2{color:white}
+
+.cards-list {
+  position: relative;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  height: 300px;
+  justify-content: space-between;
+}
+
+.card{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.div-btn{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: space-around;
+}
+
+.btn{
+  height: 30px;
+  aspect-ratio: 1;
+  border: none;
+}
+
+#btn-delete img{
+  color: white;
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1;
+}
+#btn-delete{
+  background:url("./../../../assets/icons/delete.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+#btn-update{
+  background:url("./../../../assets/icons/update.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.details {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 250px;
+  border: 2px solid#ffebcd;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 50px 1fr 50px; 
+  padding:10px;
+  align-items: center;
+}
+
+
+.name {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background-color: #ffebcd;
+  color: black;
+  width: 70px;
+  border-radius: 0 15px 0 50px;
+}
+
+.details img{
+  position:relative;
+  width: 100%;
+  height: 100%;
+}
+
+.details img:first-child{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.details img:last-child{
+  grid-column: 3;
+  grid-row: 3;
+  transform: scaleX(-1) scaleY(-1); 
+}
+
+.details .value{
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #ffebcd;
+  height: 100px;
+  border-radius:70px 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  font-size: 25px;
+}

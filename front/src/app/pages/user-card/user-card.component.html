@@ -1,0 +1,17 @@
+<div class="display-card" >
+    <h2> My Cards</h2>
+    <ul class="cards-list">
+        <li *ngFor="let card of cards" class="card">
+            <div class="div-btn">
+                <button type="button" class="btn" id="btn-delete" alt="delete button"></button>
+                <button type="button" class="btn" id="btn-update" alt="modify button"(click)="deleteCard(card)"></button>
+            </div>
+            <div class="details">
+                <img src="assets/images/fou.svg" alt="" srcset="">
+                <span class="name">{{card.name}}</span>
+                <span class="value">{{card.value}}</span>
+                <img src="assets/images/fou.svg" alt="" srcset="">
+            </div>
+        </li>
+    </ul>
+</div>
