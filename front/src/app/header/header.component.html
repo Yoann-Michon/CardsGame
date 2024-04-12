@@ -1,8 +1,10 @@
 <header class="header">
-    <img
-      src="assets/images/logocard.svg"
-      alt="Logo"
-    />
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <img
+        src="assets/images/logocard.svg"
+        alt="Logo"
+        />
+    </a>
     <nav class="home-nav" *ngIf="isLoggedIn" id="navlog">
         <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboard</a>
         <a routerLink="/rules" routerLinkActive="active" ariaCurrentWhenActive="page">Rules</a>

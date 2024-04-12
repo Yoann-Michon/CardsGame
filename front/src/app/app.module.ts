@@ -8,12 +8,14 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HeaderModule } from './header/header.module';
 import { RulesComponent } from './pages/rules/rules.component';
 import { AuthGuard } from './guards/link.guard';
+import { CardsComponent } from './pages/cards/cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     RulesComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

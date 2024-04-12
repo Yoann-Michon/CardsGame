@@ -1,1 +1,27 @@
-<p>cards works!</p>
+<div class="card-list" >
+    <h2>Cards Game</h2>
+    <ul class="card">
+        <li *ngFor="let card of cards" class="details">
+            <span class="name">{{card.name}}</span>
+        </li>
+    </ul>
+</div>
+
+<!--
+    <div class="card-list" >
+    <h2>Cards Game</h2>
+    <ul class="heroes">
+        <li *ngFor="let card of cards" >
+            <div class="div-btn">
+                <button type="button" class="btn" id="btn-delete" alt="delete button">supprimer</button>
+                <button type="button" class="btn" id="btn-update" alt="update button">supprimer</button>
+            </div>
+            <div class="details">
+                <span class="badge">{{card.id}}</span>
+                <span class="name">{{card.name}}</span>
+            </div>
+        </li>
+    </ul>
+</div>
+-->
+  
