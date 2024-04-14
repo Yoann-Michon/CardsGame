@@ -7,13 +7,13 @@ import { AuthGuard } from './guards/link.guard';
 import { CardsComponent } from './pages/cards/cards.component';
 import { UserCardComponent } from './pages/user-card/user-card.component';
 
-const routes: Routes = [
+const routes: Routes = [ 
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'rules', component: RulesComponent },
   { path: 'card', component: CardsComponent },
   { path: 'dashboard', component: DashboardComponent ,canActivate: [AuthGuard]},
-  { path: 'usercard', component: UserCardComponent }
+  { path: 'usercard', component: UserCardComponent,canActivate: [AuthGuard] }
 ];
 
 

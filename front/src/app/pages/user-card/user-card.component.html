@@ -3,8 +3,8 @@
     <ul class="cards-list">
         <li *ngFor="let card of cards" class="card">
             <div class="div-btn">
-                <button type="button" class="btn" id="btn-delete" alt="delete button"></button>
-                <button type="button" class="btn" id="btn-update" alt="modify button"(click)="deleteCard(card)"></button>
+                <button type="button" class="btn" id="btn-delete" alt="delete button"(click)="deleteCard(card)"></button>
+                <button type="button" class="btn" id="btn-update" alt="modify button"></button>
             </div>
             <div class="details">
                 <img src="assets/images/fou.svg" alt="" srcset="">

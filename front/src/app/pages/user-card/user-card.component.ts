@@ -19,6 +19,10 @@ export class UserCardComponent implements OnInit{
   updateCard(id:number){}
 
   deleteCard(card:MCard){
+    const newList=this.cards;
+    this.cards = this.cards.filter(c => c.id !== card.id);
+
+    /* supprime les cartes de la base
     this.http.delete(`http://localhost:3000/api/cards/${card.id}`).subscribe(()=> {
       try {
         this.cardService.deleteCard(parseInt(card.id!));
@@ -26,7 +30,7 @@ export class UserCardComponent implements OnInit{
       } catch (error) {
         console.log(error);
       }
-    })
+    })*/
   }
 
   fetchCards(){
