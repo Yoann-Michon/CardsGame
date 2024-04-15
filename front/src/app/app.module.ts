@@ -10,6 +10,7 @@ import { RulesComponent } from './pages/rules/rules.component';
 import { AuthGuard } from './guards/link.guard';
 import { CardsComponent } from './pages/cards/cards.component';
 import { UserCardComponent } from './pages/user-card/user-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { UserCardComponent } from './pages/user-card/user-card.component';
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-    HeaderModule
+    HeaderModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ AuthGuard ],
   bootstrap: [AppComponent]

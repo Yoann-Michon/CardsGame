@@ -25,7 +25,6 @@ export class CardService {
   }
 
   createCard(card:MCard){
-    console.log(card)
     return this.cardWebService.createCard(card);
   }
 

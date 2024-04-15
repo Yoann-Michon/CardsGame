@@ -28,5 +28,12 @@ input{
 }
 
 button{
-    align-self: flex-end;
+    align-self: center;
+    width: 60%;
+    height: 20%;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    color: #ffebcd;
+    background: none;
+    letter-spacing: 2px;
 }

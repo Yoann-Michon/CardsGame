@@ -1,17 +1,109 @@
-<div class="display-card" >
-    <h2> My Cards</h2>
-    <ul class="cards-list">
-        <li *ngFor="let card of cards" class="card">
-            <div class="div-btn">
-                <button type="button" class="btn" id="btn-delete" alt="delete button"(click)="deleteCard(card)"></button>
-                <button type="button" class="btn" id="btn-update" alt="modify button"></button>
-            </div>
-            <div class="details">
-                <img src="assets/images/fou.svg" alt="" srcset="">
-                <span class="name">{{card.name}}</span>
-                <span class="value">{{card.value}}</span>
-                <img src="assets/images/fou.svg" alt="" srcset="">
-            </div>
-        </li>
-    </ul>
+<div class="display-card">
+  <h2>My Cards</h2>
+  <ul class="cards-list">
+    <li *ngFor="let card of cards" class="card">
+      <div class="div-btn">
+        <button
+          type="button"
+          class="btn"
+          id="btn-delete"
+          alt="delete button"
+          (click)="deleteCard(card)"
+        ></button>
+        <button
+          type="button"
+          class="btn"
+          id="btn-update"
+          alt="modify button"
+          (click)="setUpdateCarte(card)"
+        ></button>
+      </div>
+      <div class="details">
+        <img src="assets/images/fou.svg" alt="" srcset="" />
+        <span class="name">{{ card.name }}</span>
+        <span class="value">{{ card.value }}</span>
+        <img src="assets/images/fou.svg" alt="" srcset="" />
+      </div>
+    </li>
+    <li>
+      <button
+        id="display-btn"
+        type="button"
+        (click)="changeDisplay('newCardForm')"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </li>
+  </ul>
 </div>
+<form id="cardForm" [formGroup]="cardForm">
+  <div class="h-form">
+    <h3>Modify card form</h3>
+    <button class="close-btn" (click)="changeDisplay('cardForm')">X</button>
+  </div>
+  <label for="cardName">Card's name:</label>
+  <input
+    type="text"
+    id="cardName"
+    name="cardName"
+    placeholder="Card's name"
+    formControlName="cardName"
+    required
+  />
+  <label for="cardValue">Card's value</label>
+  <input
+    type="number"
+    id="cardValue"
+    name="cardValue"
+    placeholder="Card's value"
+    formControlName="cardValue"
+    required
+  />
+  <div class="f-btn">
+    <button type="submit" id="cancel-btn" (click)="cancel(cardForm)">
+      Cancel
+    </button>
+    <button type="submit" [disabled]="!cardForm.valid" (click)="updateForm()">
+      Update
+    </button>
+  </div>
+</form>
+
+<form id="newCardForm" [formGroup]="newCardForm">
+  <div class="h-form">
+    <button class="close-btn" (click)="changeDisplay('newCardForm')">X</button>
+    <h3>Create card form</h3>
+  </div>
+
+  <label for="cardName">Card's name:</label>
+  <input
+    type="text"
+    id="cardName"
+    name="cardName"
+    placeholder="Card's name"
+    formControlName="cardName"
+    required
+  />
+  <label for="cardValue">Card's value</label>
+  <input
+    type="number"
+    id="cardValue"
+    name="cardValue"
+    placeholder="Card's value"
+    formControlName="cardValue"
+    required
+  />
+  <div class="f-btn">
+    <button type="submit" id="cancel-btn" (click)="cancel(newCardForm)">
+      Cancel
+    </button>
+    <button
+      type="submit"
+      [disabled]="!newCardForm.valid"
+      (click)="createCard()"
+    >
+      Create
+    </button>
+  </div>
+</form>
